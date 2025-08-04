@@ -384,7 +384,7 @@ const ConstructionMaterialsForm: React.FC = () => {
     console.log(JSON.stringify(groupedMaterials, null, 2));
 
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // await new Promise(resolve => setTimeout(resolve, 2000));
     setLoading(false);
 
     showAlert("Success", "YOur order details submitted successfully");
@@ -452,7 +452,7 @@ const ConstructionMaterialsForm: React.FC = () => {
     console.log(JSON.stringify(data, null, 2));
 
     try {
-      const res = await fetch(`https://ais-backend-prototype.onrender.com/submit-material-order`, {
+      const res = await fetch(`http://localhost:3000/submit-material-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -638,7 +638,7 @@ const ConstructionMaterialsForm: React.FC = () => {
                                 setUploadProgress(prev => ({ ...prev, [globalIndex]: 0 }));
 
                                 const xhr = new XMLHttpRequest();
-                                xhr.open("POST", `https://ais-backend-prototype.onrender.com/api/v1/upload/`);
+                                xhr.open("POST", `http://localhost:3000/api/v1/upload/`);
 
                                 xhr.upload.onprogress = (event) => {
                                   if (event.lengthComputable) {

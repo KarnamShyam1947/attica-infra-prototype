@@ -485,7 +485,7 @@ const SingleQuote = () => {
 
     console.log(data);
 
-    fetch(`https://ais-backend-prototype.onrender.com/submit-quote`, {
+    fetch(`http://localhost:3000/submit-quote`, {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',

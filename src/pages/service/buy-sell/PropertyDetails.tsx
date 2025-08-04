@@ -43,7 +43,7 @@ const PropertyDetails = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch('https://ais-backend-prototype.onrender.com/api/v1/properties/');
+        const res = await fetch('http://localhost:3000/api/v1/properties/');
         const data = await res.json();
         console.log(data);
         

@@ -37,7 +37,7 @@ const Navbar = () => {
     setLoading(true);
     
     try {
-      const res = await fetch(`https://ais-backend-prototype.onrender.com/submit-contact-details`, {
+      const res = await fetch(`http://localhost:3000/submit-contact-details`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

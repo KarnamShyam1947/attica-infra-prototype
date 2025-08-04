@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Home, Users, ChevronDown, ChevronRight, Plus, List, LogOut } from 'lucide-react';
+import { LayoutDashboard, Home, Users, ChevronDown, ChevronRight, Plus, List, LogOut, ListTodoIcon } from 'lucide-react';
 
 interface MenuItem {
   id: string;
@@ -27,6 +27,12 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, isOpen, onClose }) => {
       label: 'Dashboard', 
       icon: LayoutDashboard,
       path: '/dashboard'
+    },
+    { 
+      id: 'logs', 
+      label: 'Request', 
+      icon: ListTodoIcon,
+      path: '/requests'
     },
     {
       id: 'properties',

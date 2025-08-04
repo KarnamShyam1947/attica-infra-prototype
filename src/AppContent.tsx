@@ -27,6 +27,7 @@ import DesignDetails from './pages/service/interior-design/DesignDetails';
 import ArchitectureDesign from './pages/service/architecture-design/ArchitectureDesign';
 import MultipleQuote from './pages/service/construction/MultipleQuote';
 import About from './components/About';
+import RequestPage from './pages/dashboard/RequestPage';
 
 const AppContent = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -97,12 +98,20 @@ const AppContent = () => {
           } />
           <Route path="*" element={<NotFound />} />
         </Route>
+
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={
             <ProtectedRoute>
               <DashboardPage />
             </ProtectedRoute>
           } />
+          
+          <Route path="/requests" element={
+            <ProtectedRoute>
+              <RequestPage />
+            </ProtectedRoute>
+          } />
+
           <Route
             path="/dashboard/properties"
             element={

@@ -25,7 +25,7 @@ const BuilderList = () => {
     const fetchBuilders = async () => {
       setLoading(true);
       try {
-        const res = await fetch('https://ais-backend-prototype.onrender.com/api/v1/builders');
+        const res = await fetch('http://localhost:3000/api/v1/builders');
         const data = await res.json();
         setBuilders(data.builders);
       } catch (error) {

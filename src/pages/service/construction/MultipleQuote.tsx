@@ -492,7 +492,7 @@ const MultipleQuote = () => {
 
     console.log(data);
 
-    await fetch(`https://ais-backend-prototype.onrender.com/submit-quote`, {
+    await fetch(`http://localhost:3000/submit-quote`, {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',

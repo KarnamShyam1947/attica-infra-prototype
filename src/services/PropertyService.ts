@@ -2,7 +2,7 @@ import { showAlert } from "../utils/Alerts";
 
 export const addProperty = async (data: any) => {
     try {
-        const resp = await fetch(`https://ais-backend-prototype.onrender.com/api/v1/properties/`, {
+        const resp = await fetch(`http://localhost:3000/api/v1/properties/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export const addProperty = async (data: any) => {
 
 export const fetchProperties = async () => {
     try {
-        const resp = await fetch(`https://ais-backend-prototype.onrender.com/api/v1/properties/`);
+        const resp = await fetch(`http://localhost:3000/api/v1/properties/`);
 
         const result = await resp.json();
 
@@ -52,7 +52,7 @@ export const fetchProperties = async () => {
 
 export const deleteProperty = async (id: any) => {
     try {
-        const resp = await fetch(`https://ais-backend-prototype.onrender.com/api/v1/properties/${id}`, {
+        const resp = await fetch(`http://localhost:3000/api/v1/properties/${id}`, {
             method: "DELETE"
         });
 
